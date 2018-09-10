@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+  c9:
+    build:
+      context: .
+    environment:
+      - C9_USER=${C9_USER}
+      - C9_PASS=${C9_PASS}
+    ports:
+      - "8888:80"

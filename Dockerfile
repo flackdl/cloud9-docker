@@ -42,5 +42,6 @@ EXPOSE 80
 EXPOSE 3000
 
 # ------------------------------------------------------------------------------
-# Start supervisor, define default command.
-CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
+# Start supervisord in entrypoint script
+ADD docker-entrypoint.sh /
+ENTRYPOINT ["/docker-entrypoint.sh"]
