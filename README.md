@@ -39,7 +39,7 @@ And run
 
 ### Enable basic authentication
 
-Define C9_USER and C9_PASS environment variables.
+Define `C9_USER` and `C9_PASS` environment variables.
 
     sudo docker run -d -p 80:80 -e C9_USER=demo -e C9_PASS=demo -v /your-path/workspace/:/workspace/ $USER/cloud9-docker:latest
 
@@ -47,7 +47,7 @@ Define C9_USER and C9_PASS environment variables.
 
     docker-compose up -d
 
-With basic authentication: copy `.env.template` to `.env`, update accordingly and re-run the docker-compose command.
+To run with basic authentication: copy `.env.template` to `.env`, update accordingly and re-run the docker-compose command.
 
 *NOTE:* you must run `docker-compose down` first if you change the user/pass because the image will be cached otherwise.
     
